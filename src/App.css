@@ -1,0 +1,45 @@
+.instagram-app { --line: #eee; --muted: #737373; --blue: #0095f6; display: grid; grid-template-columns: 220px minmax(0, 470px) 290px; justify-content: center; gap: 42px; min-height: 100vh; color: #171717; }
+.sidebar { position: sticky; top: 0; display: flex; height: 100vh; flex-direction: column; padding: 28px 14px 20px 0; border-right: 1px solid var(--line); }
+.wordmark { margin: 0 0 34px 12px; color: #111; font: italic 700 28px Georgia, serif; text-decoration: none; }
+.main-nav { display: grid; gap: 5px; }
+.nav-item { display: flex; min-height: 48px; align-items: center; gap: 15px; padding: 0 12px; border: 0; border-radius: 7px; background: transparent; text-align: left; }
+.nav-item span { font-size: 14px; }
+.nav-item.is-active span { font-weight: 700; }
+.nav-avatar, .mobile-nav img { width: 25px; height: 25px; border-radius: 50%; object-fit: cover; }
+.more-link { margin-top: auto; }
+.feed-column { width: 100%; margin: 20px auto 70px; }
+.mobile-topbar, .mobile-nav { display: none; }
+.stories { display: flex; gap: 14px; overflow-x: auto; padding: 8px 3px 18px; border-bottom: 1px solid var(--line); scrollbar-width: none; }
+.stories::-webkit-scrollbar { display: none; }
+.story { display: grid; min-width: 62px; justify-items: center; gap: 5px; padding: 0; border: 0; background: none; font-size: 11px; }
+.story-ring { position: relative; width: 60px; height: 60px; padding: 3px; border-radius: 50%; background: linear-gradient(35deg, #feda75, #fa7e1e, #d62976, #962fbf); }
+.story-ring img { width: 100%; height: 100%; border: 2px solid white; border-radius: 50%; object-fit: cover; }
+.post { padding: 16px 0; border-bottom: 1px solid var(--line); }
+.post-header, .post-actions, .action-group, .my-account, .suggestion { display: flex; align-items: center; }
+.post-header { gap: 10px; padding: 0 2px 10px; }
+.avatar { width: 35px; height: 35px; border-radius: 50%; object-fit: cover; }
+.post-identity, .account-names { display: grid; gap: 2px; }
+.post-identity strong, .account-names strong { font-size: 13px; }
+.post-identity span, .account-names span { color: var(--muted); font-size: 11px; }
+.post-more { width: 22px; height: 22px; margin-left: auto; }
+.nav-item svg, .icon svg { display: block; width: 24px; height: 24px; }
+.post-image { display: block; width: 100%; max-height: 590px; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 3px; object-fit: cover; }
+.post-actions { justify-content: space-between; padding: 6px 0; }
+.action-group { gap: 7px; }
+.post-details { display: grid; gap: 6px; padding: 0 2px; font-size: 13px; }
+.post-details p { margin: 0; line-height: 1.45; }
+.text-button { color: var(--blue); font-size: 12px; font-weight: 700; }
+.post-time { color: var(--muted); font-size: 9px; }
+.right-column { position: sticky; top: 0; align-self: start; padding-top: 38px; }
+.my-account, .suggestion { gap: 11px; }
+.avatar-large { width: 44px; height: 44px; }
+.account-names { min-width: 0; flex: 1; }
+.suggestion-heading { display: flex; justify-content: space-between; margin: 25px 0 16px; color: var(--muted); font-size: 13px; }
+.suggestions { display: grid; gap: 14px; }
+.right-column footer, .right-column small { display: block; margin-top: 25px; color: #bbb; font-size: 10px; line-height: 1.7; }
+.right-column small { margin-top: 12px; }
+
+@media (max-width: 1200px) { .instagram-app { grid-template-columns: 200px minmax(0, 470px); gap: 30px; } .right-column { display: none; } }
+@media (max-width: 760px) { .instagram-app { grid-template-columns: 58px minmax(0, 470px); gap: 18px; } .sidebar { align-items: center; padding-right: 8px; } .sidebar > .wordmark { width: 28px; overflow: hidden; margin-left: 0; font-size: 0; } .sidebar > .wordmark::first-letter { font-size: 26px; } .nav-item { justify-content: center; padding: 0; } .nav-item span { display: none; } }
+@media (max-height: 520px) and (min-width: 601px) { .sidebar { padding-top: 8px; padding-bottom: 8px; } .sidebar > .wordmark { margin-bottom: 8px; } .main-nav { gap: 0; } .nav-item { min-height: 36px; } .more-link { margin-top: 8px; } }
+@media (max-width: 600px) { .instagram-app { display: block; padding-bottom: 50px; } .sidebar { display: none; } .feed-column { max-width: 470px; margin: 0 auto; } .mobile-topbar { position: sticky; z-index: 2; top: 0; display: flex; height: 50px; align-items: center; justify-content: space-between; padding: 0 14px; border-bottom: 1px solid var(--line); background: white; } .mobile-topbar .wordmark { margin: 0; } .mobile-heart { font-size: 25px; } .mobile-nav { position: fixed; z-index: 3; right: 0; bottom: 0; left: 0; display: flex; height: 49px; align-items: center; justify-content: center; gap: 10px; border-top: 1px solid var(--line); background: white; font-size: 13px; } .post { padding: 12px 0; } .post-header { padding: 0 10px 9px; } .post-image { max-height: 125vw; border: 0; border-radius: 0; } .post-actions, .post-details { margin-right: 10px; margin-left: 10px; } }
